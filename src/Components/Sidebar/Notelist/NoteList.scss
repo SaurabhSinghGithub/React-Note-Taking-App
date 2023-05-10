@@ -1,0 +1,105 @@
+.not-found{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.header {
+    h1 {
+        color: black;
+        font-size: 2.5rem;
+    }
+}
+
+.notes {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    .card {
+        background-color: blanchedalmond;
+        border: 1px solid black;
+        color: black;
+        padding: 1rem;
+        margin-top: 2rem;
+
+        &:hover {
+            background-color: red;
+            color: white;
+
+            .card-edits {
+
+                .card-icons {
+
+                    .icon-1 {
+                        color: white;
+                    }
+
+                    .icon-2 {
+                        color: white;
+                    }
+                }
+            }
+
+        }
+
+        .card-title {
+            margin-bottom: 1rem;
+
+            h3 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .card-content {
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        .card-time {
+            margin-bottom: 1rem;
+
+            p {
+                margin-top: 1rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        .card-edits {
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+
+            .card-icons {
+                display: flex;
+                gap: .5rem;
+
+                .icon-1 {
+                    color: red;
+                }
+
+                .icon-2 {
+                    color: green;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1150px) {
+
+    .notes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+@media (max-width: 800px) {
+
+    .notes {
+        grid-template-columns: 1fr;
+    }
+
+}
